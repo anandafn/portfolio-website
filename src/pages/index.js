@@ -16,7 +16,7 @@ export default function Home() {
   };
 
   const portfolioClass = () => {
-    return "text-center border shadow-lg overflow-hidden rounded-2xl";
+    return "text-center border shadow-lg overflow-hidden rounded-2xl transition hover:-translate-y-1 hover:scale-110";
   };
 
   return (
@@ -50,7 +50,8 @@ export default function Home() {
               <li>
                 <a
                   className="bg-primary text-white py-2 px-4 rounded-full ml-8"
-                  href="#"
+                  href="https://drive.google.com/file/d/1qihkbR8-6OaOhkF-taJR8a7gP3oPJd8h/view"
+                  target="_blank"
                 >
                   Resume
                 </a>
