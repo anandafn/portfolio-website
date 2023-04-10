@@ -6,13 +6,14 @@ import { AiFillLinkedin, AiFillGithub } from "react-icons/ai";
 import expenseApp from "../../public/Images/expense-tracker.png";
 import forkifyApp from "../../public/Images/forkify.png";
 import omnifoodApp from "../../public/Images/omnifood.png";
+import dashboard from "../../public/Images/dashboard.png";
 import { useState } from "react";
 
 export default function Home() {
   const [darkMode, setDarkMode] = useState(false);
 
   const classNameSkills = () => {
-    return "bg-secondary text-white py-2 px-4 rounded-2xl";
+    return "bg-secondary text-white py-2 px-4 rounded-2xl text-center";
   };
 
   const portfolioClass = () => {
@@ -59,7 +60,7 @@ export default function Home() {
             </ul>
           </nav>
 
-          <div className="text-center p-10">
+          <div className="text-center p-10 md:overflow-y-hidden">
             <h2 className="text-5xl py-2 text-primary font-bold">
               Ananda Fitri Namira
             </h2>
@@ -100,10 +101,11 @@ export default function Home() {
             <div className="flex justify-center gap-6 ">
               <div className={classNameSkills()}>HTML</div>
               <div className={classNameSkills()}>CSS</div>
-              <div className={classNameSkills()}>javascript</div>
+              <div className={classNameSkills()}>Javascript</div>
               <div className={classNameSkills()}>ReactJS</div>
               <div className={classNameSkills()}>Redux</div>
               <div className={classNameSkills()}>TailwindCSS</div>
+              <div className={classNameSkills()}>MaterialUI</div>
             </div>
           </div>
         </section>
@@ -119,7 +121,7 @@ export default function Home() {
               Portfolios
             </h3>
           </div>
-          <div className="grid lg:grid-cols-3 md:grid-cols-2 sm:grod-cols-1 gap-6 justify-center">
+          <div className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 sm:gap-8 gap-6 justify-center">
             <div className={portfolioClass()}>
               <a
                 href="https://omnifood-web-portfolio.netlify.app/"
@@ -169,15 +171,12 @@ export default function Home() {
               <div className="grid lg:grid-cols-2 md:grid-cols-2 py-4 px-8 gap-3">
                 <div className={classNameSkills()}>HTML</div>
                 <div className={classNameSkills()}>CSS</div>
-                <div className={classNameSkills()}>javascript</div>
+                <div className={classNameSkills()}>Javascript</div>
                 <div className={classNameSkills()}>API</div>
               </div>
             </div>
             <div className={portfolioClass()}>
-              <a
-                href="https://kaleidoscopic-frangollo-75d639.netlify.app/"
-                target="_blank"
-              >
+              <a href="https://yourmoneyhist.netlify.app/" target="_blank">
                 <Image
                   src={expenseApp}
                   alt="Expense App"
@@ -196,8 +195,33 @@ export default function Home() {
               <div className="grid lg:grid-cols-2 md:grid-cols-2 py-4 px-8 gap-3">
                 <div className={classNameSkills()}>HTML</div>
                 <div className={classNameSkills()}>CSS</div>
+                <div className={classNameSkills()}>Javascript</div>
+                <div className={classNameSkills()}>ReactJS</div>
+              </div>
+            </div>
+            <div className={portfolioClass()}>
+              <a href="https://your-dashboard.netlify.app/" target="_blank">
+                <Image
+                  src={dashboard}
+                  alt="React Dashboard"
+                  width={325}
+                  height={325}
+                  className="mb-4 mx-auto border-b"
+                />
+                <p
+                  className={`font-bold ${
+                    darkMode ? "text-white" : "text-gray-500"
+                  }`}
+                >
+                  React Dashboard UI
+                </p>
+              </a>
+              <div className="grid lg:grid-cols-2 md:grid-cols-2 py-4 px-8 gap-3">
+                <div className={classNameSkills()}>HTML</div>
+                <div className={classNameSkills()}>CSS</div>
                 <div className={classNameSkills()}>javascript</div>
                 <div className={classNameSkills()}>ReactJS</div>
+                <div className={classNameSkills()}>Material UI</div>
               </div>
             </div>
           </div>
